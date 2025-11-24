@@ -3,11 +3,10 @@
 echo "Starting GR Cup Strategy Dashboard..."
 
 # Check for dataset
-if [ ! -d "../barber" ]; then
+if [ ! -d "barber" ]; then
     echo "Dataset not found. Downloading..."
-    mkdir -p ../barber
-    curl -L -o ../barber/barber.zip https://trddev.com/hackathon-2025/barber-motorsports-park.zip
-    unzip ../barber/barber.zip -d ../barber
+    curl -L -o barber.zip https://trddev.com/hackathon-2025/barber-motorsports-park.zip
+    unzip barber.zip
     # Move files if they are nested (optional, depending on zip structure)
     # Assuming zip contains the CSV directly or in a folder
     echo "Dataset downloaded and extracted."
@@ -18,7 +17,7 @@ fi
 # Start Backend
 echo "Starting Backend..."
 cd backend
-pip install -r backend/requirements.txt # Uncomment if needed, assuming already installed
+# pip install -r requirements.txt # Uncomment if needed, assuming already installed
 python main.py &
 BACKEND_PID=$!
 cd ..
@@ -27,7 +26,7 @@ cd ..
 echo "Starting Frontend..."
 cd frontend
 # npm install # Uncomment if needed
-npm run dev &
+npm run dev --host &
 FRONTEND_PID=$!
 cd ..
 
