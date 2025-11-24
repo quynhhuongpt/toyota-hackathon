@@ -21,7 +21,7 @@ A real-time, AI-powered race strategy dashboard for the GR Cup, designed with a 
 ### Prerequisites
 
 *   Python 3.8+
-*   Node.js 16+
+*   Node.js version 20.19+ or 22.12+
 *   npm
 
 ### Installation & Running
@@ -34,6 +34,12 @@ A real-time, AI-powered race strategy dashboard for the GR Cup, designed with a 
 
 2.  **Run the startup script:**
     ```bash
+    cd backend
+    pip install -r requirements.txt
+    cd ..
+    cd frontend
+    npm install
+    cd ..
     ./start.sh
     ```
     This script will:
