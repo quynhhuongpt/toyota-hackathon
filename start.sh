@@ -18,7 +18,7 @@ fi
 # Start Backend
 echo "Starting Backend..."
 cd backend
-# pip install -r requirements.txt # Uncomment if needed, assuming already installed
+pip install -r backend/requirements.txt # Uncomment if needed, assuming already installed
 python main.py &
 BACKEND_PID=$!
 cd ..
