@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #0b0d17;
+  color: #a0aec0;
+  overflow: hidden;
+}
+
+@layer components {
+  .glass {
+    background-color: rgba(21, 25, 43, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.1);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #15192b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232942;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
